@@ -1,2 +1,2 @@
 # sturdy-doodle
-Laravel App for CASI
+Simple microblogging Laravel App.
