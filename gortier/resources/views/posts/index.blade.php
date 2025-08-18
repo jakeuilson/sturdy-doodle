@@ -7,6 +7,7 @@
             <h2><a href="{{ route('posts.show', $post) }}">{{ $post->title }}</a></h2>
             <p>By {{ $post->user->name }} on {{ $post->created_at->format('Y-m-d') }}</p>
             <p>{{ Str::limit($post->body, 150) }}</p>
+            <p>Comments: {{ $post->comments_count }}</p>
         </article>
     @endforeach
 

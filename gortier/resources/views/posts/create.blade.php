@@ -4,14 +4,8 @@
     <h2>New Post</h2>
     <form method="POST" action="{{ route('posts.store') }}">
         @csrf
-        <label>Title
-            <input type="text" name="title" value="{{ old('title') }}" required>
-        </label>
-        <br>
-        <label>Body
-            <textarea name="body" rows="6" required>{{ old('body') }}</textarea>
-        </label>
-        <br>
-        <button type="submit">Publish</button>
+        <input type="text" name="title" placeholder="Title" required>
+        <textarea name="body" placeholder="Body" required></textarea>
+        <button type="submit">Create Post</button>
     </form>
 @endsection
