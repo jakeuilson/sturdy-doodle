@@ -2,7 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
+use App\Models\Blog;
+use App\Models\Trend;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -13,11 +14,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        $trends = [
+            'Most Commented',
+            'Most Liked',
+            'Newest',
+        ];
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        foreach ($trends as $trend) {
+            Trend::create(['name' => $trend]);
+        }
+
+        Blog::factory(10)->create();
+
     }
 }
